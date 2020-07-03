@@ -1,6 +1,7 @@
 package main
 
 import (
+	"container/heap"
 	"fmt"
 )
 
@@ -45,6 +46,7 @@ func rotate(nums []int, k int) {
 	k = k % l
 	reverse(nums, 0, k-1)
 	reverse(nums, k, l-1)
+	heap.Fix()
 
 }
 
